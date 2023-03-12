@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "c5920f8c-dfd1-45de-bf2d-6fcca4b86eb5",
+		"name": "SpringBootRestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24034722"
+	},
+	"item": [
+		{
+			"name": "Get All Candidates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Candidate by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates/1",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Candidate by Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates/1?candidateName=Chala Kebede",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates",
+						"1"
+					],
+					"query": [
+						{
+							"key": "candidateName",
+							"value": "Chala Kebede"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add one Candidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Hamza Ali\",\r\n    \"candidate_score\": 96.99,\r\n    \"is_successfull\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Many Candidates",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"candidateName\": \"Naol Hagos\",\r\n    \"candidate_score\": 90,\r\n    \"is_successfull\": true\r\n},\r\n{\r\n    \"candidateName\": \"Abel Tessema\",\r\n    \"candidate_score\": 60,\r\n    \"is_successfull\": false\r\n},\r\n{\r\n    \"candidateName\": \"Hawa Hailu\",\r\n    \"candidate_score\": 88,\r\n    \"is_successfull\": true\r\n}]\r\n\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://locahost:8080/api/v1/allcandidates",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"allcandidates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update candidates by Name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Naol Hagos\",\r\n    \"candidate_score\": 98,\r\n    \"is_successfull\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates?candidateName=Naol Hagos",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "candidateName",
+							"value": "Naol Hagos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update candidates by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Naol Hagos\",\r\n    \"candidate_score\": 98,\r\n    \"is_successfull\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates/1",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete candidates by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"candidateName\": \"Naol Hagos\",\r\n    \"candidate_score\": 98,\r\n    \"is_successfull\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://locahost:8080/api/v1/candidates/1",
+					"protocol": "http",
+					"host": [
+						"locahost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"candidates",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
