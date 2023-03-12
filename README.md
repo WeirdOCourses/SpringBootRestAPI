@@ -70,7 +70,7 @@ Using Array
 #### Update candidates by their name
 
 ```http
-  PUT /api/v1/allcandidates
+  PUT /api/v1/candidates
 ```
 
 | Body | Type     | Description                       |
@@ -86,7 +86,7 @@ Using Array
 #### Update candidates by their id
 
 ```http
-  PUT /api/v1/allcandidates/{id}
+  PUT /api/v1/candidates/{id}
 ```
 
 | Body | Type     | Description                       |
@@ -102,7 +102,7 @@ Using Array
 #### Delete candidates by their id
 
 ```http
-  Delete /api/v1/allcandidates/{id}
+  Delete /api/v1/candidates/{id}
 ```
 | URI Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
